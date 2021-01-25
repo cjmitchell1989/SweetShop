@@ -28,7 +28,7 @@ const calculateDelivery = (req, res, next) => {
   
   // Attempt to calculate a delivery and return the result to the user
   try {
-    const result = deliveryService.calculateDelivery({ orderQuantity: value.order_quantity })
+    const result = deliveryService.getDeliverySolutions({ orderQuantity: value.order_quantity })
     res.status(200).send(result)
     return next()
   } catch (err) {

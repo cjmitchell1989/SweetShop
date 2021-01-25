@@ -7,8 +7,8 @@ POST request body:
 }
 Response body:
 {
-  [packSize[0]]: quantity,
-  [packSize[1]]: quantity,
+  [packSize: quantity,
+  [packSize]: quantity,
   ...,
-  [packSize[n]]: quantity
+  [packSize]: quantity
 }
