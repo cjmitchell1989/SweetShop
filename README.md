@@ -35,4 +35,4 @@ Response body:
 ### To run
 The best way to run locally is to run:
 $ docker-compose up --build
-Then make requests to local port 5000
+Then make requests to local port 3000
