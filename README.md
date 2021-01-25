@@ -1,4 +1,4 @@
-### Simon's Sweet Shop
+# Simon's Sweet Shop
 
 An API to return the best array of possible sweet pack sizes for a given order total, to minimise extra sweets delivered and minimise packs delivered
 
@@ -10,7 +10,7 @@ Solution will be in the form:
   [packSize]: quantity
 }
 
-## Request
+### Request
 POST request body:
 {
   pack_sizes: int[]
@@ -32,7 +32,7 @@ Response body:
   }
 ]
 
-## To run
+### To run
 The best way to run locally is to run:
 $ docker-compose up --build
 Then make requests to local port 5000
