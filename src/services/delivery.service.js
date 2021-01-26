@@ -24,7 +24,7 @@ class DeliveryService {
 
   runWorker(data) {
     return new Promise((resolve, reject) => {
-      const deliveryWorker = new Worker('./src/services/calc.js', { workerData: data })
+      const deliveryWorker = new Worker('./src/services/deliveryCalc.js', { workerData: data })
       deliveryWorker.on('message', (result) => {
         resolve(result)
       })
