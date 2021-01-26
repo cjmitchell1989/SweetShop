@@ -27,13 +27,22 @@ const calculateDelivery = (req, res, next) => {
   const deliveryService = new DeliveryService(value.pack_sizes)
   
   // Attempt to calculate a delivery and return the result to the user
-  try {
-    const result = deliveryService.getDeliverySolutions({ orderQuantity: value.order_quantity })
+  deliveryService.getDeliverySolutions({ orderQuantity: value.order_quantity }).then(result => {
     res.status(200).send(result)
     return next()
-  } catch (err) {
+  }).catch(err => {
+    console.error(err)
     return next(err)
-  }
+  })
+
+
+  // try {
+  //   const result = deliveryService.getDeliverySolutions({ orderQuantity: value.order_quantity })
+  //   res.status(200).send(result)
+  //   return next()
+  // } catch (err) {
+  //   return next(err)
+  // }
 }
 
 module.exports = {
