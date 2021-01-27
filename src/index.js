@@ -19,4 +19,5 @@ const shutdown = ({ code = 0, message = 'FAIL' } = {}) => {
 process.on('SIGINT', () => { shutdown({ code: 1, message: 'SIGINT' }) })
 process.on('SIGTERM', () => { shutdown({ code: 1, message: 'SIGTERM' }) })
 
+
 module.exports = server
